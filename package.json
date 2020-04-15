@@ -12,6 +12,7 @@
     "fracty": "^1.0.9",
     "gridsome": "^0.7.0",
     "gridsome-plugin-typescript": "^0.4.0",
+    "gridsome-source-directus": "^0.1.1",
     "ts-loader": "^6.2.2",
     "typescript": "^3.8.3",
     "vuetify": "^2.2.20"
