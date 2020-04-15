@@ -10,6 +10,4 @@ export default function (Vue, { appOptions }) {
   Vue.use(Vuetify)
   appOptions.vuetify = new Vuetify({})
   Vue.component('Layout', DefaultLayout)
-
-  window.Vue = Vue
 }
