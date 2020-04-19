@@ -1,20 +1,6 @@
 <template>
   <Layout>
     <v-row>
-      <v-col cols="12" md="4">
-        <h1>Your shopping list</h1>
-        <v-data-table 
-          v-model="ingredientSelected" 
-          :headers="ingredientHeaders" 
-          :items="displayedIngredients()" 
-          item-key="name" 
-          :items-per-page="15" 
-          class="elevation-5"
-          show-select
-          disable-sort
-          mobile-breakpoint="1"
-        />
-      </v-col>
       <v-col cols="12" md="8">
         <h1>Hi there!</h1>
         <p>You can find all your recipes below. As you select them, we'll compile a shopping list for you.</p>
@@ -24,6 +10,20 @@
           :items="displayedRecipes()" 
           class="elevation-5" 
           item-key="name" 
+          show-select
+          disable-sort
+          mobile-breakpoint="1"
+        />
+      </v-col>
+      <v-col v-if="displayedIngredients().length > 0" cols="12" md="4">
+        <h1>Your shopping list</h1>
+        <v-data-table 
+          v-model="ingredientSelected" 
+          :headers="ingredientHeaders" 
+          :items="displayedIngredients()" 
+          item-key="name" 
+          :items-per-page="15" 
+          class="elevation-5"
           show-select
           disable-sort
           mobile-breakpoint="1"
