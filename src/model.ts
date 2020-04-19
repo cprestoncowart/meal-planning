@@ -8,3 +8,8 @@ export interface TableRecipe {
     name: string;
     calories: Number;
 }
+
+export interface TableState {
+    select: (selectionStatus: boolean) => void;
+    isSelected: boolean;
+}
