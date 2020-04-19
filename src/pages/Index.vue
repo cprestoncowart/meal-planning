@@ -2,32 +2,32 @@
   <Layout>
     <v-row>
       <v-col cols="12" md="4">
-        <v-card outlined tile class="ma-5 pa-5">
-          <h1>Your shopping list</h1>
-          <v-data-table 
-            v-model="ingredientSelected" 
-            :headers="ingredientHeaders" 
-            :items="displayedIngredients()" 
-            item-key="name" 
-            :items-per-page="15" 
-            class="elevation-5" show-select
-          />
-
-        </v-card>
+        <h1>Your shopping list</h1>
+        <v-data-table 
+          v-model="ingredientSelected" 
+          :headers="ingredientHeaders" 
+          :items="displayedIngredients()" 
+          item-key="name" 
+          :items-per-page="15" 
+          class="elevation-5"
+          show-select
+          disable-sort
+          mobile-breakpoint="1"
+        />
       </v-col>
       <v-col cols="12" md="8">
-        <v-card outlined tile class="ma-5 pa-5">
-          <h1>Hi there!</h1>
-          <p>You can find all your recipes below. As you select them, we'll compile a shopping list for you.</p>
-          <v-data-table 
-            v-model="recipeSelected" 
-            :headers="recipeHeaders" 
-            :items="displayedRecipes()" 
-            class="elevation-5" 
-            item-key="name" 
-            show-select
-          />
-        </v-card>
+        <h1>Hi there!</h1>
+        <p>You can find all your recipes below. As you select them, we'll compile a shopping list for you.</p>
+        <v-data-table 
+          v-model="recipeSelected" 
+          :headers="recipeHeaders" 
+          :items="displayedRecipes()" 
+          class="elevation-5" 
+          item-key="name" 
+          show-select
+          disable-sort
+          mobile-breakpoint="1"
+        />
       </v-col>
     </v-row>
   </Layout>
